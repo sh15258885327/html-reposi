@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        h3,ul,body,h5{
+            margin: 0;
+        }
+        ul{
+            padding-left: 0;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .list{
+            position: relative;
+            width: 1024px;
+            /* background-color: red; */
+        }
+        .list>li{
+            width:210px;
+        }
+        .list>li>.content{
+            display: none;
+            position: absolute;
+            top: 0;
+            /* background-color: coral; */
+            margin-left: 210px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 480px;
+            min-height: 350px;
+            padding:20px 20px 35px 35px;
+            font-size: 12px;
+        }
+        .list>li>.content>li{
+            width:400px;
+            /* background-color: chartreuse; */
+        }
+        .list>li>.content>li+li{
+            margin-top: 30px;
+        }
+        .list>li>.content>li>h5{
+            display: inline-block;
+            width: 84px;
+            height: 100%;
+            margin-right: 38px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .list .content>li>.items{
+            display: inline-block;
+            width: 274px;
+            /* background-color: pink; */
+            line-height: 50px;
+        }
+        .list .content>li>.items>li{
+            display: inline;/*行内元素*/
+            border-left: 1px solid black;
+        }
+        /*标题区*/
+        .list>li>h3{
+            width: 210px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        .list>li:nth-of-type(n):hover>h3+.content{
+            display: block;
+        }
+        .list>li>h3>img{
+            width:18px;
+            height: 17px;
+            margin-right: 15px;
+            vertical-align: -5px;
+        }
+    </style>
+</head>
+<body>
+ <ul class="list">
+     <li>
+        <h3><img src="images/5.png" width="18" height="17" alt="" title="">IT互联网</h3>
+        <ul class="content">
+           <li>
+               <h5>编程语言</h5>
+               <ul class="items">
+                   <li><a href="#">c</a></li>
+                   <li><a href="#">PHP</a></li>
+                   <li><a href="#">Python</a></li>
+                   <li><a href="#">C++</a></li>
+                   <li><a href="#">Java</a></li>
+                   <li><a href="#">Swift</a></li>
+                   <li><a href="#">linux</a></li>
+               </ul>
+           </li>
+           <li> 
+               <h5>互联网运营</h5>
+                <ul class="items">
+                    <li><a href="#">淘宝运营</a></li>
+                    <li><a href="#">新媒体运营</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">SEM</a></li>
+                    <li><a href="#">网络营销</a></li>
+                    <li><a href="#">天猫运营</a></li>
+                    <li><a href="#">营销实战</a></li>
+                </ul>
+            </li>
+           <li> 
+                <h5>前端开发</h5>
+                <ul class="items">
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">DIV</a></li>
+                </ul>
+            </li>
+           <li>
+                <h5>移动开发</h5>
+                <ul class="items">
+                    <li><a href="#">android</a></li>
+                    <li><a href="#">IOS</a></li>
+                </ul>
+           </li>
+           <li>
+                <h5>游戏开发</h5>
+                <ul class="items">
+                    <li><a href="#">Cocos2d-x游戏开发</a></li>
+                    <li><a href="#">Unity3d游戏开发</a></li>
+                </ul>
+           </li>
+           <li>
+                <h5>云计算大数据</h5>
+                <ul class="items">
+                    <li><a href="#">大数据</a></li>
+                    <li><a href="#">区块链</a></li>
+                    <li><a href="#">人工智能</a></li>
+                </ul>
+           </li>
+        </ul>
+    </li>
+     <li>
+         <h3><img src="images/3.png" width="18" height="17" alt="" title="">设计创作</h3>
+         <ul class="content">
+            <li>
+                <h5>视觉设计</h5>
+                <ul class="items">
+                    <li><a href="#">平面设计</a></li>
+                    <li><a href="#">Photoshop</a></li>
+                    <li><a href="#">UI设计</a></li>
+                    <li><a href="#">形象设计</a></li>
+                    <li><a href="#">服装设计</a></li>
+                    <li><a href="#">淘宝美工</a></li>
+                </ul>
+            </li>
+            <li> 
+                <h5>游戏动漫</h5>
+                 <ul class="items">
+                     <li><a href="#">游戏模型</a></li>
+                     <li><a href="#">插画</a></li>
+                     <li><a href="#">游戏原画</a></li>
+                 </ul>
+             </li>
+            <li> 
+                 <h5>摄影</h5>
+                 <ul class="items">
+                     <li><a href="#">影视后期</a></li>
+                     <li><a href="#">摄影拍捏</a></li>
+                     <li><a href="#">后期修图</a></li>
+                 </ul>
+             </li>
+            <li>
+                 <h5>环境艺术</h5>
+                 <ul class="items">
+                     <li><a href="#">室内设计</a></li>
+                     <li><a href="#">建筑设计</a></li>
+                 </ul>
+            </li>
+            <li>
+                 <h5>工业设计</h5>
+                 <ul class="items">
+                     <li><a href="#">塑胶模具设计</a></li>
+                     <li><a href="#">五金模具设计</a></li>
+                     <li><a href="#">机械设计</a></li>
+                     <li><a href="#"> UG产品设计</a></li>
+                     <li><a href="#">CADUG编程</a></li>
+                 </ul>
+            </li>
+         </ul>
+    </li>
+     <li>
+         <h3><img src="images/4.png" width="18" height="17" alt="" title="">实用外语</h3>
+         <ul class="content">
+            <li>
+                <h5>英语</h5>
+                <ul class="items">
+                    <li><a href="#">基础英语</a></li>
+                    <li><a href="#">英语口语</a></li>
+                </ul>
+            </li>
+            <li> 
+                <h5>日语</h5>
+                 <ul class="items">
+                     <li><a href="#">日语零基础</a></li>
+                     <li><a href="#">日语初级</a></li>
+                     <li><a href="#">日语中级</a></li>
+                     <li><a href="#">日语高级</a></li>
+                 </ul>
+             </li>
+            <li> 
+                 <h5>韩语</h5>
+                 <ul class="items">
+                     <li><a href="#">韩语零基础</a></li>
+                     <li><a href="#">韩语初级</a></li>
+                     <li><a href="#">韩语中级</a></li>
+                     <li><a href="#">韩语高级</a></li>
+                 </ul>
+             </li>
+            <li>
+                 <h5>法语</h5>
+                 <ul class="items">
+                     <li><a href="#">法语初级</a></li>
+                     <li><a href="#">法语中级</a></li>
+                     <li><a href="#">法语高级</a></li>
+                     <li><a href="#">法语发音班</a></li>
+                     <li><a href="#">法语零基础</a></li>
+                 </ul>
+            </li>
+            <li>
+                 <h5>泰语</h5>
+                 <ul class="items">
+                     <li><a href="#">泰语初级</a></li>
+                     <li><a href="#">泰语中级计</a></li>
+                     <li><a href="#">泰语高级</a></li>
+                 </ul>
+            </li>
+            <li>
+                <h5>西班牙语</h5>
+                <ul class="items">
+                    <li><a href="#">西班牙语初级</a></li>
+                    <li><a href="#">西班牙语中级</a></li>
+                    <li><a href="#">西班牙语高级</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>德语</h5>
+                <ul class="items">
+                    <li><a href="#">零基础</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>对外汉语</h5>
+                <ul class="items">
+                    <li><a href="#">基础汉语</a></li>
+                    <li><a href="#">高级汉语</a></li>
+                </ul>
+            </li>
+         </ul>
+    </li>
+     <li>
+         <h3><img src="images/2.png" width="18" height="17" alt="" title="">兴趣艺术</h3>
+         <ul class="content">
+            <li>
+                <h5>美术</h5>
+                <ul class="items">
+                    <li><a href="#">素描</a></li>
+                    <li><a href="#">彩铅</a></li>
+                    <li><a href="#">水彩</a></li>
+                    <li><a href="#">手绘</a></li>
+                    <li><a href="#">油画</a></li>
+                    <li><a href="#">国画</a></li>
+                    <li><a href="#">书法</a></li>
+                    <li><a href="#">钢笔</a></li>
+                    <li><a href="#">淡彩</a></li>
+                    <li><a href="#">指绘</a></li>
+                </ul>
+            </li>
+            <li> 
+                <h5>音乐</h5>
+                 <ul class="items">
+                     <li><a href="#">钢琴</a></li>
+                     <li><a href="#">二胡</a></li>
+                     <li><a href="#">古筝</a></li>
+                     <li><a href="#">声乐</a></li>
+                     <li><a href="#">吉他</a></li>
+                 </ul>
+             </li>
+            <li> 
+                 <h5>生活百科</h5>
+                 <ul class="items">
+                     <li><a href="#">赚钱理财</a></li>
+                     <li><a href="#">变美</a></li>
+                     <li><a href="#">职场办公</a></li>
+                     <li><a href="#">健康养生</a></li>
+                     <li><a href="#">个人成长</a></li>
+                     <li><a href="#">品质生活</a></li>
+                     <li><a href="#">婚姻情感</a></li>
+                     <li><a href="#">亲子育儿</a></li>
+                     <li><a href="#">舞蹈</a></li>
+                 </ul>
+             </li>
+            <li>
+                 <h5>播音主持</h5>
+                 <ul class="items">
+                     <li><a href="#">主持朗诵</a></li>
+                     <li><a href="#">配音</a></li>
+                     <li><a href="#">普通话</a></li>
+                     <li><a href="#">声音美化</a></li>
+                 </ul>
+            </li>
+            <li>
+                 <h5>成人教育</h5>
+                 <ul class="items">
+                     <li><a href="#">高升专</a></li>
+                     <li><a href="#">专升本</a></li>
+                     <li><a href="#">高升本</a></li>
+                     <li><a href="#">自考</a></li>
+                 </ul>
+            </li>
+            <li>
+                <h5>职业资格证</h5>
+                <ul class="items">
+                    <li><a href="#">教师资格证</a></li>
+                    <li><a href="#">注册消防工程师</a></li>
+                    <li><a href="#">其他考证</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>中小幼教育</h5>
+                <ul class="items">
+                    <li><a href="#">美育</a></li>
+                    <li><a href="#">小儿书法</a></li>
+                    <li><a href="#">趣味语文</a></li>
+                    <li><a href="#">趣味数学</a></li>
+                    <li><a href="#">趣味英语</a></li>
+                    <li><a href="#">亲子课堂</a></li>
+                    <li><a href="#">高考日语</a></li>
+                    <li><a href="#">国学</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>财会课堂</h5>
+                <ul class="items">
+                    <li><a href="#">会计培训</a></li>
+                    <li><a href="#">零基础会计</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>职场指导</h5>
+                <ul class="items">
+                    <li><a href="#">办公软件</a></li>
+                    <li><a href="#">就业指导</a></li>
+                    <li><a href="#">职场管理</a></li>
+                    <li><a href="#">职场心理学</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>海外艺术</h5>
+                <ul class="items">
+                    <li><a href="#">艺术课程</a></li>
+                    <li><a href="#">艺术合作</a></li>
+                </ul>
+            </li>
+         </ul>
+    </li>
+     <li>   
+         <h3><img src="images/1.png" width="18" height="17" alt="" title="">农业生产</h3>
+         <ul class="content">
+            <li>
+                <h5>种植</h5>
+                <ul class="items">
+                    <li><a href="#">蔬菜种植</a></li>
+                    <li><a href="#">果树种植</a></li>
+                    <li><a href="#">葡萄种植</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>水产养殖</h5>
+                <ul class="items">
+                    <li><a href="#">小龙虾养殖</a></li>
+                    <li><a href="#">南美白对虾养殖</a></li>
+                    <li><a href="#">泥鳅养殖</a></li>
+                    <li><a href="#">澳洲淡水龙虾养殖</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>畜牧养殖</h5>
+                <ul class="items">
+                    <li><a href="#">对虾养殖</a></li>
+                    <li><a href="#">养猪</a></li>
+                    <li><a href="#">养鸡</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>经营管理</h5>
+                <ul class="items">
+                    <li><a href="#">水稻飞防</a></li>
+                    <li><a href="#">农资经营</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+ </ul>
+</body>
+</html>

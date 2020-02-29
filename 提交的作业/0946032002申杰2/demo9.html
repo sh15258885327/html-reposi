@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .size{
+            width: 646px;
+            height: 646px;
+            border-radius: 50%;
+        }
+        .box{
+            position: relative;
+            margin: 50px auto 0;
+            border: 1px solid #cdcdcd;
+            background-image: linear-gradient(to right,white 323px,black 323px);  
+        }
+        .one-small-box{
+            position: absolute;
+            background-image: radial-gradient(circle at 323px 160px,white 40px,black 40px,black 162px,transparent 162px);
+        }
+        .two-small-box{
+            background-image: radial-gradient(circle at 323px 486px,black 40px,white 40px,white 164px,transparent 164px);
+        }  
+        div{
+            transition-duration: 0.5s;
+        }
+        @media screen and (min-width:500px) and (max-width:1000px){
+            div{
+                /* animation: animat linear infinite 1s; */
+                transform: rotate(180deg);
+                /* transition-duration: 0.5s; */
+            }
+            /* @keyframes animat {
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            } */
+         };
+        
+    </style>
+</head>
+<body>
+    <div class="box size">
+        <div class="one-small-box size"></div>
+        <div class="two-small-box size"></div>
+    </div>
+</body>
+</html>
