@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        body,ul,p{
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .big-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 888px;
+            height: 500px;
+            /* animation: pilian 2s linear forwards; */
+            /* background-color:rgb(46, 136, 143); */
+            margin: 100px auto 0;
+        }
+        .big-box>li{  
+            width: 350px;
+            height: 450px; 
+        }
+        /* @keyframes pilian{
+            from{
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+            to{
+                overflow: hidden;
+                width: 888px;
+                height: 500px;
+                transform: rotate(-360deg);
+            }
+        } */
+        /*作业1*/
+        .big-box>.box1>.home-work1{
+            box-sizing: border-box;
+            width: 347px;
+            /* height: 444px;  */
+            padding: 10px 14px 16px 12px;
+            background-color:#eee ;
+        }
+        .home-work1>.content{
+            box-sizing: border-box;
+            width: 320px;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .home-work1>.content>ul{
+            box-sizing: border-box;
+            margin-top: 12px;
+            width: 280px;
+            padding: 0 0 0 8px;
+        }
+        .home-work1>.content>ul>li{
+            width: 272px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .home-work1>.content>ul>li+li{
+            margin-top: 12px;
+        }
+         /*作业1写完了*/
+
+         /*作业2*/
+        .box2>.home-work2{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width:50px;
+            border-color: red transparent transparent;
+            margin: 20px auto 0;
+        }
+        .box2>div:nth-child(2){
+            margin: auto;
+            width:  0px;
+            height: 0px;
+            border-width: 50px;
+            border-style: double;
+            border-color: pink
+        }
+        .box2>div:nth-child(3){
+            margin: auto;
+            width:  10px;
+            height: 10px;
+            border-width: 30px 30px 80px;
+            border-style: solid;
+            border-color: pink pink transparent;
+        }
+        .box2>div:nth-child(4){
+            margin: auto;
+            width: 120px;
+            height: 120px;
+           /* background-color: seashell; */
+        }
+        .heart>div{
+            width: 60px;
+            height: 30px;
+            /* background-color: rebeccapurple; */
+            float: left;
+        }
+        .heart>div:nth-child(1){
+            /* margin-left:30px; */
+            width: 0px;
+            height: 30px;
+            border-style: solid;
+            border-radius: 30px 30px 0 0;
+            border-color: red red transparent red;
+            border-width: 0px 30px;
+        }
+        .heart>div:nth-child(2){
+            /* margin-left:30px; */
+            width: 0px;
+            height: 30px;
+            border-style: solid;
+            border-radius: 30px 30px 0 0;
+            border-color: red red transparent red;
+            border-width: 0px 30px;
+        }
+        .heart>div:nth-child(3){
+            /* margin-left:30px; */
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-color: red red transparent transparent;
+            border-width: 30px;
+        }
+        .heart>div:nth-child(4){
+            /* margin-left:30px; */
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-color: red transparent transparent red;
+            border-width: 30px;
+        }
+        /*作业二写完了*/
+
+        /*作业3*/
+        .box3>.home-work3{
+            box-sizing: border-box;
+            width: 303px;
+            /* height: 357px;; */
+            padding: 24px 41px 32px 22px;
+            background-color: #eee;
+        }
+        .home-work3>.content{
+            box-sizing: border-box;
+            margin-right: 0;
+            width: 240px;
+            /* height: 300px; */
+            padding: 38px 20px 36px;
+            background-color: #fff;
+        }
+        .home-work3>.content>.list{
+            box-sizing: border-box;
+            list-style-type: disc;
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 30px 20px 22px;
+        }
+        .home-work3>.content>.list>li{
+            box-sizing: border-box;
+            width: 100%;
+            /* min-height: 30px;  */
+            border-color: #eee;
+            border-width:0 0 1px ;
+            border-style: solid;
+            font-size: 12px;
+            padding: 9px 0;
+        }
+        /*作业3写完了*/
+    </style>
+</head>
+<body>
+    <ul class="big-box">
+        <li class="box1">
+            <div class="home-work1">
+                <div class="content">
+                   <p>
+                        <img src="images/01.png" title="香水" width="280" height="280">
+                   </p>
+                   <ul class="list">
+                        <li>【shaiya莹】水之密语靓彩</li>
+                        <li>【抢新品NO.120】千金净雅妇科专用</li>
+                        <li>【抢新品NO.120】千金净雅妇科专用</li>
+                   </ul> 
+                </div>
+            </div>
+        </li>
+        <li class="box2">
+                <div  class="home-work2"></div>
+                    <div></div>
+                    <div></div>
+                    <div class="heart">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+        </li>
+        <li class="box3">
+            <div class="home-work3">
+                <div class="content">
+                    <ul class="list">
+                        <li>蓝唇妆居然这么火？</li>
+                        <li>大牌画风为何突变？</li>
+                        <li>欧莱雅男士面膜</li>
+                        <li>COACH与追梦女性</li>
+                        <li>元气少女养成记！</li>
+                        <li>佑天蓝中国体融会</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

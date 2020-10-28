@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        body,p,h3{
+            margin: 0;
+        }
+        ul{
+            list-style-type:none;
+            padding-left: 0;
+        }
+        .nav{
+            line-height: 231px;
+        }
+        .nav>li{
+            width: 235px;
+            height: 221px;
+            background-color: white;
+            display: inline-block;
+            /* line-height：231px; */
+           /*这里我使用line-height 上下不会有间隙，且布局出现混乱 不懂 */
+          /* margin-bottom: 5px;为向下扩容做准备*/
+        }
+        .nav{
+            margin: 100px auto 0;
+            width: 1223px;
+            /* height: 307px; */
+            box-sizing: border-box;
+            padding: 30px 12px 52px 10px;
+            background-color: #eee;
+        }
+        .nav>li>p>a>img{
+            width: 160px;
+            height: 160px;
+        }
+        .nav>li>.image{
+            margin-left: 74px;
+        }
+        .nav>li>.product{
+            margin-top: 20px;
+            width: 236px;
+            font-size: 16px;
+            font-weight: bold;
+            text-indent: 20px;
+        }
+        .nav>li>.coupon{
+            width: 236px;
+            text-indent: 20px;
+        }
+        .nav>li>.coupon>a{
+            font-size: 12px;
+            color: #a7deff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <h3 class="product">大家电年度盛典</h3>
+            <p class="coupon"><a href="#">疯抢300元优惠券</a></p>
+            <p class="image"><a href="#"><img src="images/1.jpg" title="音箱" width="400" height="400"></a></p>
+        </li>
+        <li><h3 class="product">冬季孕妇毛衣专场</h3>
+            <p class="coupon"><a href="#">时尚潮流温暖舒适</a></p>
+            <p class="image"><a href="#"><img src="images/2.jpg" title="毛衣" width="400" height="400"></a></p></li>
+        <li><h3 class="product">乔丹童鞋跑鞋</h3>
+            <p class="coupon"><a href="#">释放双脚跑起来</a></p>
+            <p class="image"><a href="#"><img src="images/3.jpg" title="跑鞋" width="400" height="400"></a></p></li>
+        <li><h3 class="product">双12整车特卖啦</h3>
+            <p class="coupon"><a href="#">贷款买车24期0利率</a></p>
+            <p class="image"><a href="#"><img src="images/4.jpg" title="整车" width="400" height="400"></a></p></li>
+        <li><h3 class="product">品牌碎末疯抢</h3>
+            <p class="coupon"><a href="#">分期免息</a></p>
+            <p class="image"><a href="#"><img src="images/5.jpg" title="碎末" width="400" height="400"></a></p></li> 
+    </ul>
+</body>
+</html>

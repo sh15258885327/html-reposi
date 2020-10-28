@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        table{
+            margin: 100px auto 0;
+            text-align: center;
+            border-collapse: collapse;
+            width: 500px;
+        }
+        th,td{
+            height:100px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>图片</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="images/taobao.png">
+                </td>
+                <td>
+                    <span class="price">0.3</span>
+                </td>
+                <td>
+                    <button class="sub">-</button>
+                    <span class="num">0</span>
+                    <button class="add">+</button>
+                </td>
+                <td>
+                    <span class="sum-price">0.6</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let price = document.querySelector(".price"),
+            num = document.querySelector(".num"),
+            sumPrice = document.querySelector(".sum-price"),
+            sub = document.querySelector(".sub"),
+            add = document.querySelector(".add");
+            add.onclick = function(){
+                num.innerText = parseInt(num.innerText)+1;
+                sumPrice.innerText = (parseFloat(price.innerText)*parseInt(num.innerText)).toFixed(1);
+            }
+            sub.onclick = function(){
+                if(parseInt(num.innerText)>0){
+                    num.innerText = parseInt(num.innerText)-1;
+                    sumPrice.innerText =(parseFloat(price.innerText)*parseInt(num.innerText)).toFixed(1);
+                }else{
+                    alert("数量不可以少于0");
+                }
+            }
+        function mmg(){
+             kl;
+        }
+        mmg();
+        console.log(kl);
+    </script>
+</body>
+</html>

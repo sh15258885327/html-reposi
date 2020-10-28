@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .box{
+            width: 560px;
+            height: 300px;
+            margin: 50px auto;
+            border:1px solid #ccc;
+        }
+        .box ul{ 
+            width:100%;
+            height:100%;
+             /* transform-style: preserve-3d;
+            perspective: 1000px;
+            transform: rotateY(30deg); */
+            overflow: hidden;
+        }
+        .box ul li{
+            width: 140px;
+            height:100%;
+            float: left;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .box ul li span{
+            position: absolute;
+            /* top:0;
+            left:0; */
+            height:100%;
+            width: 140px;
+            display: block;
+        }
+        .box ul li:nth-child(1) {
+            animation: turn 5s infinite ;
+        }
+        .box ul li:nth-child(2) {
+            animation: turn 5s infinite 0.1s;
+        }
+        .box ul li:nth-child(3) {
+            animation: turn 5s infinite 0.2s;
+        }
+        .box ul li:nth-child(4) {
+            animation: turn 5s infinite 0.3s;
+        }
+
+        .box ul li:nth-child(2){
+            transform: rotateX(90deg);
+        }
+        .box ul li:nth-child(3){
+            transform: rotateX(180deg);
+        }
+        .box ul li:nth-child(4){
+            transform: rotateX(270deg);
+        }
+        .box ul li span:nth-child(1){
+            background-image: url(images/s1.jpg);
+            transform: translateZ(150px); 
+        }
+        .box ul li span:nth-child(2){
+            background-image: url(images/s2.jpg);
+            transform: translateY(150px) rotateX(90deg);
+
+            /* transform: ; */
+        }
+        .box ul li span:nth-child(3){
+            transform: translateZ(-150px);
+
+            background-image: url(images/s3.jpg);
+        }
+        .box ul li span:nth-child(4){
+            transform: translateY(-150px) rotateX(90deg);
+
+            background-image: url(images/s4.jpg);
+        }
+        @keyframes turn{
+            0% {
+                transform: rotateX(0deg);
+            }
+            25% {
+                transform: rotateX(-90deg);
+            }
+            50% {
+                transform: rotateX(-180deg);
+            }
+            75% {
+                transform: rotateX(-270deg);
+            }
+            100% {
+                transform: rotateX(-360deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+             <li>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+            <li>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+            <li>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
