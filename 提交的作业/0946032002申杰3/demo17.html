@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .page-box{
+            margin: auto;
+            position: fixed;
+            width: 1420px;
+            height: 520px;
+            font-size: 12px;
+            background: url(images/dlbg.jpg) 0 0/cover;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .page-box>.login-box{
+            margin: 60px 150px 47px 930px;
+            width: 340px;
+            /* height: 413px; */
+            background-color: white;
+            overflow: hidden;
+        }
+        .box-size{
+            width: 254px;
+            height: 40px;
+            border: 1px transparent #ddd;
+        }
+        .box-size.username{
+           background: url(images/zhanghao.jpg) no-repeat 0 -1px/contain;
+        }
+        .box-size.password{
+           background: url(images/mima.jpg) no-repeat 0 -1px/contain;
+        }
+        .box-size input{
+            margin-left: 37px;
+            height: 38px;
+            width: 217px;
+            border-width: 0;
+            text-indent: 10px;
+            outline: 1px solid #ddd;
+        }
+        .page-box>.login-box>.username{
+            margin: 30px auto 0;     
+        }
+        .page-box>.login-box>.password{
+            margin: 25px auto 0;
+        }
+        .page-box>.login-box>.operate{
+            margin: 0 auto;
+            width: 254px;
+            height: 65px;
+            line-height: 80px;
+            white-space: nowrap;
+        }
+        .page-box>.login-box>.operate a:nth-of-type(1){
+            margin-left: 63px;
+        }
+        .page-box>.login-box>.operate a:nth-of-type(2){
+            margin-left: 10px;
+        }
+        .page-box>.login-box #btn,.coporation input{
+            display: none;
+        }
+        .page-box>.login-box .button{
+            display: block;
+            margin: 0 auto;
+            width:254px;
+            height: 44px;
+            background: url(images/but.jpg) 0 0/cover;
+        }
+        .page-box>.login-box>.coporation{
+            margin: 0 auto 96px;
+            box-sizing: border-box;
+            width: 254px;
+            height: 70px;
+            padding: 41px 13px 0 5px;
+            /* background-color: red; */
+        }
+        .page-box>.login-box>.coporation span{
+            text-indent: 5px;
+        }
+        .page-box>.login-box>.coporation img{
+            width: 28px;
+            height: 28px;
+        }
+        .page-box>.login-box>.coporation label{
+            display: inline-block;
+            margin-left: 12px;
+            width: 28px;
+            height: 28px;
+            /* background-color: turquoise; */
+        }
+        .page-box>.login-box>.coporation label+label{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-box">
+        <form class="login-box" type="post" action="#">
+            <div class="username box-size">
+                <input type="text" placeholder="用户名/邮箱地址/手机号" id="username">
+            </div>
+            <div class="password box-size" id="password">
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="operate">
+                <input type="checkbox" checked><span>记住账号</span>
+                <a href="#">欢迎注册</a>
+                <a href="#">忘记密码?</a>
+            </div>
+            <input type="submit" id="btn">
+            <label for="btn" class="button"></label>
+            <div class="coporation">
+                <span>合作网站账号登录:</span>
+                <input type="radio" name="copo" id="weixin">
+                <input type="radio" name="copo" id="qq">
+                <input type="radio" name="copo" id="taobao">
+                <label for="weixin">
+                    <img src="images/weixin.png" width="32" height="32" alt="微信">
+                </label>
+                <label for="qq">
+                    <img src="images/qqlogin.png" width="32" height="32" alt="QQ">
+                </label>
+                <label for="taobao">
+                    <img src="images/taobao.png" width="32" height="32" alt="淘宝">
+                </label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

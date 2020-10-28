@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        body,h3,ul{
+            margin: 0;
+        }
+        ul{
+            padding-left: 0;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color:black; 
+        }
+        .box{
+            margin: 50px auto 0;
+            box-sizing: border-box;
+            padding:25px 30px 27px 35px;
+            height:640px;
+            width: 1248px;
+            background-color: yellow;
+        }
+        .box>.content{
+            width: 1182px;
+            border: 1px solid #ccc; 
+            background-color: white;
+        }
+        /*标题区*/
+        .box>.content>.title{
+            width: 1182px;
+            height: 80px;
+        }
+        .box>.content>.title>li:nth-child(1){
+            margin-left: 200px;
+            border-left-color: transparent;
+        }
+        .box>.content>.title>li{
+            float: left;
+            margin-top: 38px;
+            width: 77px;
+            height: 12px;
+            line-height: 12px;
+            font-size: 12px; 
+            border-left: 1px solid #ccc;
+            text-align: center;  
+        }
+        /*图片区*/
+        .content>.items img{
+            width: 100%;
+            height: 100%;
+        }
+        .box>.content>.items{
+            width: 1182px;
+            height: 100%;
+        }
+        .box>.content>.items>.left{
+            width:559px;
+            height:100%;
+            /* background-color:brown; */
+            float: left;
+        }
+        .box>.content>.items>.right{
+            box-sizing: border-box;
+            width:623px;
+            height:512px;
+            /* background-color: blue; */
+            float: left;
+            padding-right:20px;
+        }
+        .content>.items>.left>li{
+            width: 227px;
+            height: 248px;
+            float: left;
+            border-bottom: 1px solid #cccccc;
+        }
+        .content>.items>.left>li:nth-child(1){
+            width: 330px;
+            height: 497px;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid transparent;
+            float: left;
+        }
+        .content>.items>.left>li:nth-child(3){
+            border-bottom: 1px solid transparent; 
+        }
+        .content>.items>.right>li{
+            width: 200px;
+            height: 165px;
+            /* background-color: yellow; */
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            float: right;
+        }
+        .content>.items>.right>li:nth-child(4){
+            width: 401px;
+            height: 331px;
+            /* background-color: red; */
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid transparent;
+            float: right;
+        }
+        .content>.items>.right>li:nth-child(6){
+            border-bottom: 1px solid transparent;
+        }
+        .content>.items::after{
+            display: block;
+            content:"";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <ul class="title">
+                <li>
+                    <h3><a href="#">护肤</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">彩妆</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">美发</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">美体</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">香氛</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">肌肤</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">产品</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">唇部</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">精华</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#">修护</a></h3>
+                </li>
+            </ul>
+            <div class="items">
+                <ul class="left">
+                    <li><img src="images/10.png"title="图片" alt="图片" width="207" height="336"></li>
+                    <li><img src="images/9.jpg"title="图片" alt="图片" width="151" height="164"></li>
+                    <li><img src="images/5.jpg"title="图片" alt="图片" width="149" height="165"></li>
+                </ul>
+                <ul class="right">
+                    <li><img src="images/6.jpg"title="图片" alt="图片" width="132" height="118"></li>
+                    <li><img src="images/7.jpg"title="图片" alt="图片" width="130" height="116"></li>
+                    <li><img src="images/8.jpg"title="图片" alt="图片" width="136" height="120
+                        "></li>
+                    <li><img src="images/2.jpg"title="图片" alt="图片" width="269" height="215"></li>
+                    <li><img src="images/4.jpg"title="图片" alt="图片" width="135" height="106"></li>
+                    <li><img src="images/3.jpg"title="图片" alt="图片" width="136" height="108"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

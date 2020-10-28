@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body,ul{
+            margin: 0;
+        }
+        ul{
+            padding-left: 0;
+            list-style-type: none;
+        }
+        .size{
+            width: 646px;
+            height: 646px;
+            border-radius: 50%;
+        }
+        .box{
+            margin: 50px auto 0;
+            width: 1500px;
+            height: 1000px;
+            background-color: brown;  
+        }
+        .box>ul{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: bisque;
+        }
+        .box>ul input{
+            display: none;
+        }
+        .box>.bagua{
+            width:100%;
+            height: 800px;
+            background-color: skyblue;
+            background-image: radial-gradient(circle at 750px 1200px,skyblue 680px,rgba(133,117,181,0.5) 720px,rgba(133,117,181,0.5)  740px,#8575b6 740px, #8abbce 740px,#8abbce 780px,#aed983 780px,#aed983 820px,#fff48e 820px,#fff48e 860px,#f9be94 860px, #f9be94 900px,#f87485 900px,rgba(247,135,132,0.1) 940px,transparent 940px);  
+        } 
+        .bagua>.small-box{
+            position: relative;
+            border: 1px solid #cdcdcd;
+            background-image: linear-gradient(to right,white 323px,black 323px);
+        }
+        .bagua>.small-box>.one-small-box{
+            position: absolute;
+            background-image: radial-gradient(circle at 323px 160px,white 40px,black 40px,black 162px,transparent 162px);
+        }
+        .bagua>.small-box>.two-small-box{
+            position: absolute;
+            background-image: radial-gradient(circle at 323px 486px,black 40px,white 40px,white 164px,transparent 164px);
+        }  
+        @keyframes animat {
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                } 
+        } 
+        @keyframes trans {
+                from{
+                    transform: translateX(0);
+                }
+                to{
+                    transform: translateX(800px);
+                } 
+        } 
+        @keyframes gun {
+                0%{
+                    transform: translateX(0)rotate(0deg);
+                }
+                25%{
+                    transform: translateY(180px)rotate(360deg);
+                }
+                50%{
+                    transform: translate(800px,180px)rotate(0deg);
+                }
+                75%{
+                    transform: translate(800px,0)rotate(360deg);
+                } 
+                100%{
+                    ransform: translate(0px,0)rotate(0deg);
+                }
+        }
+        @media screen and (max-width: 1200px){
+            .bagua>.small-box{
+                animation: gun linear infinite 3s alternate;
+            }
+        }     
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><input type="button" value="旋转" id="bt1"><label for="bt1">单机此处旋转,双击暂停</label></li>
+            <li><input type="button" value="位移" id="bt2"><label for="bt2">单机此处位移,双击暂停</label></li>
+            <li><input type="button" value="滚" id="bt3"><label for="bt3">单机此处滚蛋,双击暂停</label></li>
+        </ul>
+        <div class="bagua">
+            <div class="small-box size">
+                <div class="one-small-box size"></div>
+                <div class="two-small-box size"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+            var bagua=document.querySelector(".small-box");
+            var r1 = document.querySelector("ul>li:nth-child(1)");
+            var r2 = document.querySelector("ul>li:nth-child(2)");
+            var r3 = document.querySelector("ul>li:nth-child(3)");
+            function rotate(){
+                bagua.style.cssText="animation: animat linear infinite 1s;"
+            };
+            function translate(){
+                bagua.style.cssText="animation: trans linear infinite 1s alternate;"
+            };
+            function gun(){
+                bagua.style.cssText="animation: gun linear infinite 3s alternate;"
+            };
+            function pause(){
+                bagua.style.cssText="animation: pause;"
+            };
+            r1.onclick=rotate;
+            r2.onclick=translate;
+            r3.onclick=gun;
+            r1.ondblclick=pause;
+            r2.ondblclick=pause;
+            r3.ondblclick=pause;
+    </script>
+</body>
+</html>
