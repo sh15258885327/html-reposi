@@ -1,0 +1,14 @@
+@import "./banner.css";
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        background-color: skyblue;
+    }
+    img{
+        display: block;
+        transform:rotateZ(15deg);
+        box-shadow: 3px 3px 3px #555;
+    }
+}
