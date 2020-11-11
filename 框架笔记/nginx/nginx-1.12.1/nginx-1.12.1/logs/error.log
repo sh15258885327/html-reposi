@@ -1,0 +1,9 @@
+2020/06/30 21:33:20 [error] 190996#187836: *1 CreateFile() "D:\projectRes\software\nginx-1.12.1\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/06/30 21:48:25 [error] 185888#182212: ReadFile() "D:\projectRes\software\nginx-1.12.1\nginx-1.12.1\conf" failed (1: Incorrect function)
+2020/06/30 21:48:57 [emerg] 18332#196756: unknown directive "//范围0-65535" in D:\projectRes\software\nginx-1.12.1\nginx-1.12.1\conf\nginx.conf:37
+2020/06/30 21:58:11 [emerg] 185312#195852: unknown directive "//范围0-65535" in D:\projectRes\software\nginx-1.12.1\nginx-1.12.1/conf/nginx.conf:37
+2020/06/30 21:58:46 [emerg] 192528#195652: unknown directive "//范围0-65535" in D:\projectRes\software\nginx-1.12.1\nginx-1.12.1\conf\nginx.conf:37
+2020/06/30 22:07:43 [emerg] 192464#184764: unknown directive "//范围0-65535" in D:\projectRes\software\nginx-1.12.1\nginx-1.12.1\conf\nginx.conf:37
+2020/06/30 22:08:37 [emerg] 187176#12544: CreateFile() "D:\projectRes\software\nginx-1.12.1\conf\nginx.conf" failed (3: The system cannot find the path specified)
+2020/06/30 22:11:16 [error] 190996#187836: *10 CreateFile() "D:\projectRes\software\nginx-1.12.1\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/06/30 22:17:49 [notice] 194936#190828: signal process started

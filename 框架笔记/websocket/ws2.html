@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+</head>
+<body>
+ <input type="text" class="mes">
+ <button class="btn">发送消息</button>
+ <div class="getmes"></div>
+ <script>
+   
+     let getmes = document.querySelector(".getmes");
+     document.querySelector(".btn").onclick=function(e){
+         e.preventDefault();
+         console.log(1);
+         let ws = new WebSocket("ws://localhost:8080");
+         console.log(ws);
+         let content = document.querySelector(".mes").value;
+         ws.onopen=function(){
+            console.log("服务开启");
+             ws.send(content);
+         }
+         ws.onmessage=function(evt){
+            getmes.innerHTML=evt.data;
+            ws.close();
+         }
+         ws.onclose=function(){
+             console.log("服务关闭");
+         }
+     }
+ </script>
+</body>
+</html>

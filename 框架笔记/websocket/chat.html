@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type:none;
+        }
+        form{
+            position: relative;
+            margin: auto;
+            width: 500px;
+            height:600px;
+            background-color: bisque;
+            font-size: 24px;
+        }
+        ul{
+            overflow:hidden;
+            width: 100%;
+        }
+        ul>li{
+            width: 100%;
+        }
+        ul>li:nth-of-type(2n){
+            background-color: pink;
+            text-align: right;
+        }
+        .send{
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: left;
+            bottom: 0;
+            height: 10%;
+        }
+        .send>.content{
+            display: block;
+            width: 80%;
+        }
+        .send>.button{
+            flex-grow:1 ;
+            display: block;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <ul class="msg">
+        </ul>
+        <div class="send">
+            <input type="text" placeholder="输入聊天消息..." class="content">
+            <input type="submit" value="Send" class="button">
+        </div>   
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+        let btn = document.querySelector(".button");
+        let content = document.querySelector(".content");
+        let msgCon = document.querySelector(".msg");
+        btn.onclick=function(e){
+            e.preventDefault();
+            socket.emit("chat",content.value);
+            content.value="";
+        }
+        socket.on("chat",function(msg){
+            console.log(msg);
+            let li = document.createElement("li");
+            li.innerText = msg;
+            msgCon.appendChild(li);
+        })
+       
+    </script>
+</body>
+</html>

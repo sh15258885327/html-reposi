@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="申杰">
+    <meta name="keywords" content="关键字信息">
+    <meta name="description" content="信息描述">
+    <title></title>
+</head>
+<body>
+    <form action="http://localhost:3002/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+       <input type="submit" value="提交">
+    </form>
+    <script>
+        let http = require("http");
+let formidable = require("formidable");
+let path = require("path");
+let timestamp = require("time-stamp");
+let fs = require("fs");
+http.createServer(function(req,res){
+    console.log(req.url);
+    let name,time,extname,olddir,newdir;
+    if(req.url==="/upload" && req.method.toLowerCase()==='post'){
+        const form = formidable({ multiples: true });//俩种创建方式之一
+        form.uploadDir="./upload";  
+        form.parse(req, (err, fields, files) => {
+            if(err){
+                throw err;
+            }
+            name = "upload";
+            time = timestamp("YYYYMMDDmmss");
+            extname = path.extname(files.file.name);
+            olddir = __dirname+"/"+files.file.path;
+            newdir = __dirname+"/upload/"+name+time+extname;
+        });
+        form.on("end",function(err){
+            if(err){
+                throw err;
+            }
+            fs.rename(olddir,newdir,function(err){
+                if(err){
+                    throw err
+                }
+                res.end("修改成功")
+            })
+        });
+        return;
+    }
+}).listen(3002,"localhost");
+    </script>
+</body>
+</html>
