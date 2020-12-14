@@ -27,16 +27,105 @@ Vue.use(Vuex)
 ###### 1、State
 Vuex使用单一状态树,用一个对象就包含了全部的应用层级状态。每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。
 
+**备注：state 是存储的公用的属性值**
+
+其他组件获取state里的值：
+
+~~~
+computed:{
+	propA(){
+		return this.$store.state.a
+	}
+	propB(){
+		return this.$store.state.b
+	}
+}
+~~~
+
+或者通过映射：
+
+~~~
+computed:{
+    ...mapState({
+        propA:a
+        propB:b
+	})
+}
+~~~
+
 ###### 2、Getter
+
 Vuex 允许我们在 store 中定义“getter”（可以认为是 store 的计算属性）。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。
 
+**备注：Getter对应的对象里面有一些可以用来操作和计算的方法（本身不会改变state)**
+
+其他组件获取Getter里的值：
+
+~~~
+this.$store.getters.fullInfo
+~~~
+
+或者：
+
+~~~
+computed:{
+    ...getters({
+        fullInfo
+	})
+}
+~~~
+
 ###### 3、Mutation
-更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数。
+更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方，并且**它会接受 state 作为第一个参数**。
+
+**备注：Mutation对应的对象里面写一些共用的方法，第一个参数是state，从第二个参数开始是调用该方法时传入的参数**
+
+其他组件获取Mutation里的值：
+
+~~~
+this.$store.commit('xxx',{a:1,b:2})//传多个值
+this.$store.commit('xxx',1)//传单个值
+~~~
+
+或者：
+
+~~~
+methods:{
+    ...mapMutation({
+        xxx
+	})
+}
+~~~
 
 ###### 4、Action
+
 Action 类似于 mutation，不同在于：
-- Action 提交的是 mutation，而不是直接变更状态。
-- Action 可以包含任意异步操作。
+- **Action 提交的是 mutation里的方法**，而不是直接变更状态。
+
+  ~~~
+  当异步函数体内调用mutation里的同步函数时，this.$store.commit('xxx',a1,a2,...)
+  ~~~
+
+- Action 可以包含任意异步h桉树操作。
+
+其他组件获取action里的值：
+
+~~~
+this.$store.dispatch('xxx',{a:1,b:2})//传多个值
+this.$store.dispatch('xxx',1)//传单个值
+~~~
+
+或者：
+
+~~~
+methods:{
+    ...mapAction({
+        xxx
+	})
+}
+~~~
+
+
 
 ###### 5、Module
 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
@@ -302,3 +391,13 @@ export const store = new Vuex.Store({
    通过this.$store.dipatch来调用action里的方法*/
 
    
+
+文档：
+
+https://www.jianshu.com/p/2e5973fe1223
+
+在做项目的时候：
+
+​	我们可以把store.js 分成 motutation .js  action.js state.js getter.js，然后整合到index.js再引入 
+
+​	同时我们可以为了防止同事瞎写方法名和事件，可以单独拉一个文件出来，然后通过[obj.a]的方式来影射那个文件的方法名

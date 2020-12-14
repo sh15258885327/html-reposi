@@ -183,8 +183,6 @@ Hello World
 
 ### 具名插槽
 
-
-
 ~~~html
 <div id="app">
 		   <test-listener>
@@ -192,7 +190,7 @@ Hello World
 			   你好2
 			   <template v-slot:footer>你好3</template>
 		   </test-listener>
-	</div>
+</div>
 ~~~
 
 上述代码在使用子组件的插槽时,需要给 template标签绑定v-slot:header(具体哪个插槽的名字)

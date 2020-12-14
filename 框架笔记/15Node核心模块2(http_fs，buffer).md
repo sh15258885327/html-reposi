@@ -383,6 +383,10 @@ if(bol){
 
 ##### 三、 buffer模块
 
+已经变更：.......
+
+https://www.runoob.com/nodejs/nodejs-buffer.html
+
 numbermonk.com
 
 这个网址会展示 十进制  十六进制  二进制 和 罗马数字对应的表

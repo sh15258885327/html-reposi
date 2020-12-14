@@ -134,8 +134,8 @@ props:{
 </div>
 <script>
 Vue.component('blog',{
-props:['postTitle'],
-template:`<div>{{postTitle}}</div>`
+    props:['postTitle'],
+    template:`<div>{{postTitle}}</div>`
 })
 
 let vm = new Vue({

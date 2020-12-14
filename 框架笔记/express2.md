@@ -25,6 +25,39 @@ app.route("/")//设置一个公共路由
 1. app.use(path,callback)中的callback既可以是**router对象**又可以是函数
 2. app.get(path,callback)中的callback只能是函数
 
+### express 之 static
+
+可以一次性把多个文件夹下的静态资源加载过来，不用一个个引入了，
+
+比如：
+
+app.use(express.static("./public/"))
+
+app.use(express.static("./files/"))
+
+但是这是相对于服务器启动文件的路径，为了安全起见可以使用绝对路径
+
+~~~js
+app.use(path.resolve(`${__dirname}`,"public/"))
+~~~
+
+注：
+
+server.js
+
+~~~js
+let express = require("express")
+let app = express()
+
+/*app.get("/",(req,res,next)=>{
+    res.end("1111")
+})*/
+app.use(express.static("./public/")) //此时运行服务器会直接加载public下的index.html
+app.listen(3000)
+~~~
+
+
+
 #### router对象
 
 **router实例就是一个中间件**
